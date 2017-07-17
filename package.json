@@ -14,5 +14,12 @@
   "bugs": {
     "url": "https://github.com/kadimi/bootswatch-light/issues"
   },
-  "homepage": "https://github.com/kadimi/bootswatch-light#readme"
+  "homepage": "https://github.com/kadimi/bootswatch-light#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-remote-src": "^0.4.2",
+    "merge-stream": "^1.0.1"
+  }
 }

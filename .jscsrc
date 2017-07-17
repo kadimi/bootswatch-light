@@ -1,0 +1,7 @@
+{
+    "preset": "airbnb",
+    "fileExtensions": [ ".js" ],
+    "excludeFiles": [
+    	"light/*"
+    ]
+}
