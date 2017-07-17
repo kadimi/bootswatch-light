@@ -24,12 +24,12 @@ gulp.task('bootstrap.get', () => {
     // 'bootstrap-theme.css',
     'bootstrap-theme.min.css',
     'bootstrap-theme.min.css.map',
-  ], { base: bsBase + 'dist/css/' }).pipe(gulp.dest('light/bootstrap/css'));
+  ], { base: bsBase + 'dist/css/' }).pipe(gulp.dest('light/css'));
 
   tasks.push = remoteSrc([
     'bootstrap.js',
     'bootstrap.min.js',
-  ], { base: bsBase + 'dist/js/' }).pipe(gulp.dest('light/bootstrap/js'));
+  ], { base: bsBase + 'dist/js/' }).pipe(gulp.dest('light/js'));
 
   tasks.push = remoteSrc([
     'glyphicons-halflings-regular.eot',
@@ -37,7 +37,7 @@ gulp.task('bootstrap.get', () => {
     'glyphicons-halflings-regular.ttf',
     'glyphicons-halflings-regular.woff',
     'glyphicons-halflings-regular.woff2',
-  ], { base: bsBase + 'fonts/' }).pipe(gulp.dest('light/bootstrap/fonts'));
+  ], { base: bsBase + 'fonts/' }).pipe(gulp.dest('light/fonts'));
 
   return merge(tasks);
 });
