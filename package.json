@@ -1,0 +1,19 @@
+{
+  "name": "bootswatch-light",
+  "version": "1.0.0",
+  "description": "All I wanted was CSS and Sass/Less files",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadimi/bootswatch-light.git"
+  },
+  "author": "Nabil Kadimi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kadimi/bootswatch-light/issues"
+  },
+  "homepage": "https://github.com/kadimi/bootswatch-light#readme"
+}
