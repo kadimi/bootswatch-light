@@ -118,7 +118,7 @@ gulp.task('bootstrap.get', () => {
 gulp.task('bootswatch.get', () => {
 
   var tasks = [];
-  var bwBase = 'https://raw.githubusercontent.com/thomaspark/bootswatch/gh-pages/';
+  var bwBase = 'https://raw.githubusercontent.com/thomaspark/bootswatch/347d741/';
 
   [
     'cerulean',
