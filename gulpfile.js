@@ -10,7 +10,7 @@ gulp.task('default', ['clean'], () => {
 });
 
 // Delete existing files
-gulp.task('clean', (cb) => del('light/**', cb));
+gulp.task('clean', (cb) => del(['3/**', '4/**'], cb));
 
 // Download Bootstrap 4 files.
 gulp.task('bootstrap-4.get', () => {
@@ -31,7 +31,7 @@ gulp.task('bootstrap-4.get', () => {
     'bootstrap-reboot.css.map',
     'bootstrap-grid.min.css',
     'bootstrap.css.map',
-  ], { base: bsBase + 'dist/css/' }).pipe(gulp.dest('light/4/_css'));
+  ], { base: bsBase + 'dist/css/' }).pipe(gulp.dest('4/_css'));
 
   // List generated with `find dist/js -type f`.
   tasks.push = remoteSrc([
@@ -43,7 +43,7 @@ gulp.task('bootstrap-4.get', () => {
     'bootstrap.min.js.map',
     'bootstrap.bundle.min.js',
     'bootstrap.js.map',
-  ], { base: bsBase + 'dist/js/' }).pipe(gulp.dest('light/4/_js'));
+  ], { base: bsBase + 'dist/js/' }).pipe(gulp.dest('4/_js'));
 
   // List generated with `find scss -type f`.
   tasks.push = remoteSrc([
@@ -130,7 +130,7 @@ gulp.task('bootstrap-4.get', () => {
     '_images.scss',
     '_reboot.scss',
     'bootstrap-reboot.scss',
-  ], { base: bsBase + 'scss/' }).pipe(gulp.dest('light/4/_scss'));
+  ], { base: bsBase + 'scss/' }).pipe(gulp.dest('4/_scss'));
 
   return merge(tasks);
 });
@@ -150,13 +150,13 @@ gulp.task('bootstrap-3.get', () => {
     'bootstrap-theme.css.map',
     'bootstrap-theme.min.css',
     'bootstrap.css.map',
-  ], { base: bsBase + 'dist/css/' }).pipe(gulp.dest('light/3/_css'));
+  ], { base: bsBase + 'dist/css/' }).pipe(gulp.dest('3/_css'));
 
   // List generated with `find dist/js -type f`.
   tasks.push = remoteSrc([
     'bootstrap.js',
     'bootstrap.min.js',
-  ], { base: bsBase + 'dist/js/' }).pipe(gulp.dest('light/3/_js'));
+  ], { base: bsBase + 'dist/js/' }).pipe(gulp.dest('3/_js'));
 
   // List generated with `find less -type f`.
   tasks.push = remoteSrc([
@@ -233,7 +233,7 @@ gulp.task('bootstrap-3.get', () => {
     'modals.less',
     'thumbnails.less',
     'grid.less',
-  ], { base: bsBase + 'less/' }).pipe(gulp.dest('light/3/_less'));
+  ], { base: bsBase + 'less/' }).pipe(gulp.dest('3/_less'));
 
   // List generated with `find fonts -type f`.
   tasks.push = remoteSrc([
@@ -242,7 +242,7 @@ gulp.task('bootstrap-3.get', () => {
     'glyphicons-halflings-regular.svg',
     'glyphicons-halflings-regular.woff',
     'glyphicons-halflings-regular.woff2',
-  ], { base: bsBase + 'fonts/' }).pipe(gulp.dest('light/3/_fonts'));
+  ], { base: bsBase + 'fonts/' }).pipe(gulp.dest('3/_fonts'));
 
   return merge(tasks);
 });
@@ -281,12 +281,11 @@ gulp.task('bootswatch-3.get', () => {
       '_bootswatch.scss',
       'bootswatch.less',
       '_variables.scss',
-    ], { base: `${bwBase + theme}/` }).pipe(gulp.dest(`light/3/${theme}`));
+    ], { base: `${bwBase + theme}/` }).pipe(gulp.dest(`3/${theme}`));
   });
 
   return merge(tasks);
 });
-
 
 // Download bootswatch 3 files.
 gulp.task('bootswatch-4.get', () => {
@@ -324,7 +323,7 @@ gulp.task('bootswatch-4.get', () => {
       'bootstrap.css',
       '_bootswatch.scss',
       '_variables.scss',
-    ], { base: `${bwBase + theme}/` }).pipe(gulp.dest(`light/4/${theme}`));
+    ], { base: `${bwBase + theme}/` }).pipe(gulp.dest(`4/${theme}`));
   });
 
   return merge(tasks);
